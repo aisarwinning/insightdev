@@ -4,6 +4,18 @@ const { Client, Events, GatewayIntentBits, Partials} = require('discord.js');
 // Create a new client instance
 const client = new Client({ intents: 65535, partials: [Partials.Channel, Partials.Message, Partials.GuildMember, Partials.User, Partials.Reaction, Partials.Guild] });
 
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send("this is where insight bot lies")
+});
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log('server started');
+});
+
+
 // When the client is ready, run this code (only once)
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, c => {
