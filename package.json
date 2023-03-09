@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
-    "build": "yarn build && yarn add discord.js && yarn add express"
+    "build": "npm run build && npm install discord.js && npm install express"
   },
   "dependencies": {
     "discord.js": "^14.7.1",
