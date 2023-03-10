@@ -23,7 +23,7 @@ client.once(Events.ClientReady, c => {
 });
 
 client.on(Events.MessageCreate, message => {
-if (message === "ping") return message.reply("pong");
+if (message.content === "ping") return message.reply("pong");
 });
 
 // Log in to Discord with your client's token
